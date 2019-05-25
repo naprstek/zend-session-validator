@@ -2,6 +2,7 @@
 
 namespace Zend\Session\Validator;
 
+use Jenssegers\Agent\Agent;
 use Zend\Http\PhpEnvironment\RemoteAddress;
 use Zend\Session\Validator\ValidatorInterface as SessionValidator;
 
@@ -59,7 +60,8 @@ class OwnSession implements SessionValidator
      */
     protected function createData()
     {
-        return session_id() . '|' . $this->getIpAddress();
+        $agent = new Agent();
+        return session_id() . '|' . $agent->device() . '|' . $agent->browser() . '|' . $agent->platform() . '|' . $this->getIpAddress();
     }
 
     /**

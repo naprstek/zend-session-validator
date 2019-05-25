@@ -1,2 +1,2 @@
 # zend-session-validator
-Aditional session validators fo ZF3
+Aditional session validators for ZF3

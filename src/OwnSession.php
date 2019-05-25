@@ -28,8 +28,8 @@ class OwnSession implements SessionValidator
     }
 
     /**
-     * isValid() - this method will determine if the current user IP matches the
-     * IP we stored when we initialized this variable.
+     * isValid() - this method will determine if the current session ID matches the
+     * ID we stored when we initialized this variable.
      *
      * @return bool
      */

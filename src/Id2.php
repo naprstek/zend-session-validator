@@ -11,7 +11,7 @@ namespace Zend\Session\Validator;
 /**
  * session_id validator
  */
-class Id implements ValidatorInterface
+class Id2 implements ValidatorInterface
 {
     /**
      * Session identifier.

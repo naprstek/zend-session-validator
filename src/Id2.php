@@ -65,15 +65,15 @@ class Id2 implements ValidatorInterface
 
         switch ($hashBitsPerChar) {
             case 4:
-                $pattern = "#^([0-9a-f]*){{$sidLength}}$#";
+                $pattern = "#^[0-9a-f]{{$sidLength}}$#";
                 break;
             case 6:
-                $pattern = "#(^[0-9a-zA-Z-,]*){{$sidLength}}$#";
+                $pattern = "#^[0-9a-zA-Z-,]{{$sidLength}}$#";
                 break;
             case 5:
                 // intentionally fall-through
             default:
-                $pattern = "#^([0-9a-v]*){{$sidLength}}$#";
+                $pattern = "#^[0-9a-v]{{$sidLength}}$#";
                 break;
         }
 

@@ -34,7 +34,7 @@ class OwnSession implements SessionValidator
     protected function createData()
     {
         $agent = new Agent();
-        return md5(session_id() . '|' . $agent->device() . '|' . $agent->browser() . '|' . $agent->platform() . '|' . $agent->languages());
+        return md5(session_id() . '|' . $agent->device() . '|' . $agent->browser() . '|' . $agent->platform() . '|' . implode(',', $agent->languages()));
     }
 
     /**
